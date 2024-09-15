@@ -167,7 +167,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     ShowWindow(hwnd, SW_SHOWNORMAL); // 把窗体显示出来
     UpdateWindow(hwnd);              // 更新窗体
 
-    MSG msg;
+    MG msg;
     // 消息循环
     while (GetMessage(&msg, NULL, 0, 0)) // 如果消息不是WM_QUIT,返回非零值；如果消息是WM_QUIT，返回零
     {
