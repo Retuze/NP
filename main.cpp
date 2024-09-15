@@ -160,7 +160,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     wndcls.lpszMenuName = NULL;      // 设置窗体的菜单,没有，填NULL
     wndcls.style = CS_HREDRAW | CS_VREDRAW; // 设置窗体风格为水平重画和垂直重画
     RegisterClass(&wndcls);                 // 向操作系统注册窗体
-
+你奈娜哎的
     // 产生一个窗体，并返回该窗体的句柄，第一个参数必须为要创建的窗体的类名，第二个参数为窗体标题名
     HWND hwnd = CreateWindow(L"NP", L"新建项目", WS_OVERLAPPEDWINDOW, x, y, width, height, NULL, NULL, hInstance, NULL);
 
