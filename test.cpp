@@ -67,6 +67,6 @@ int main() {
             std::cout << cmd << std::endl;  
         }  
     }  
-  
+  xs64cb
     return 0;  
 }

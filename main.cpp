@@ -119,8 +119,8 @@ jkbhb
     case WM_CLOSE:
         DestroyWindow(hwnd); // 销毁窗口并发送WM_DESTROY消息，但是程序没有退出
         break;
-    case WM_DESTROY:
         PostQuitMessage(0); // 发出WM_QUIT消息，结束消息循环
+    case WM_DESTROY:
         break;
     case WM_CTLCOLORSTATIC:
         hdcStatic = (HDC)wParam;
@@ -167,11 +167,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     ShowWindow(hwnd, SW_SHOWNORMAL); // 把窗体显示出来
     UpdateWindow(hwnd);              // 更新窗体
 
-    MSG msg;
     // 消息循环
+    MSG msg;
     while (GetMessage(&msg, NULL, 0, 0)) // 如果消息不是WM_QUIT,返回非零值；如果消息是WM_QUIT，返回零
     {
-        TranslateMessage(&msg); // 翻译消息，如把WM_KEYDOWN和WM_KEYUP翻译成一个WM_CHAR消息
         DispatchMessage(&msg);  // 派发消息
+        TranslateMessage(&msg); // 翻译消息，如把WM_KEYDOWN和WM_KEYUP翻译成一个WM_CHAR消息
     }
 }
