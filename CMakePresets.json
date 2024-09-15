@@ -1,0 +1,17 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "Clang",
+            "displayName": "Clang 18.1.8 x86_64-w64-windows-gnu",
+            "description": "使用编译器: C = C:\\tool\\mingw64\\bin\\clang.exe, CXX = C:\\tool\\mingw64\\bin\\clang++.exe",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "C:/tool/mingw64/bin/clang.exe",
+                "CMAKE_CXX_COMPILER": "C:/tool/mingw64/bin/clang++.exe",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}
