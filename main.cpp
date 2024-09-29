@@ -79,9 +79,6 @@ LRESULT CALLBACK WinSunProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             {
                 printf("hello world\n");
                 int result = MessageBox(hwnd, TEXT("项目已存在，是否覆盖？"), TEXT("Info"), MB_OKCANCEL);
-jkbhb
-
-
 
                 // 根据用户的选择执行不同的操作
                 if (result == IDOK)
@@ -167,9 +164,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     ShowWindow(hwnd, SW_SHOWNORMAL); // 把窗体显示出来
     UpdateWindow(hwnd);              // 更新窗体
 
-    MG msg;
+    MSG msg;
     // 消息循环
-    MSG 
     while (GetMessage(&msg, NULL, 0, 0)) // 如果消息不是WM_QUIT,返回非零值；如果消息是WM_QUIT，返回零
     {
         DispatchMessage(&msg);  // 派发消息
